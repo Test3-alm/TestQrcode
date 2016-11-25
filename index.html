@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QR code reader</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <style>
+
+            #scan{
+                position: relative;
+                z-index: 9;
+            }
+            
+            #focus {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                z-index: 1;
+                display: none;
+            }
+
+            #focus_right {
+                right: 0;
+            }
+            
+            #focus_left{
+                left: 0;
+            }
+
+            #focus_right, #focus_left {
+                position: fixed;
+                background: rgba(0,0,0,0.5);
+                width: 25%;
+                height: 100%;
+            }
+
+            #focus_square{
+                position: fixed;
+                width: 50%;
+                height: 50vw;
+                background: rgba(255,0,0,0.2);
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0);
+                -webkit-transform: translate3d(-50%, -50%, 0);
+                -moz-transform: translate3d(-50%, -50%, 0);
+                -ms-transform: translate3d(-50%, -50%, 0);
+                -o-transform: translate3d(-50%, -50%, 0);
+            }
+            
+
+        </style>
+
+    </head>
+    <body>
+
+        <div data-role="page">
+
+            <button id="button">Scan</button>
+
+            <div id="focus">
+
+                <div id="focus_top"></div>
+                <div id="focus_right"></div>
+
+                <div id="focus_square"></div>
+
+                <div id="focus_bottom"></div>
+                <div id="focus_left"></div>
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="assets/js/vendor/jquery-3.1.1.min.js"></script>
+
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/scanner.js"></script>
+        <script src="./cordova.js"></script>
+
+    </body>
+</html>
+
+
+
